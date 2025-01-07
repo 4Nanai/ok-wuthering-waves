@@ -15,7 +15,7 @@ class Carlotta(BaseChar):
             return self.switch_next_char()
         if self.liberation_available():
             while self.liberation_available():
-                self.click_liberation()
+                self.click_liberation(timeout=1.5)
                 self.check_combat()
             if self.resonance_available:
                 if self.click_resonance()[0]:
